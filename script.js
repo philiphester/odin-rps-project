@@ -1,10 +1,11 @@
 // Odin Foundtations JavaScript Project: Rock, Paper, Scissors
 
 // Get computer's choice
+// Randomly return Rock, Paper, or Scissors and return answer
 function getComputerChoice() {
-    // Randomly return Rock, Paper, or Scissors
     let computerChoice;
     let randomNum = Math.floor(Math.random() * 3);
+
     if (randomNum === 0) {
         computerChoice = "Rock";
     } else if (randomNum === 1) {
@@ -20,6 +21,13 @@ function getComputerChoice() {
 console.log(getComputerChoice());
 
 // Get player's choice
+// Prompt user to enter Rock, Paper, or Scissors, and return answer
+function getHumanChoice() {
+    let humanChoice = prompt("Please enter your choice (Rock, Paper, or Scissors): ");
+    return humanChoice;
+}
+
+console.log(getHumanChoice());
 
 // Declare the players score variables
 

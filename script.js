@@ -20,8 +20,6 @@ function getComputerChoice() {
     return computerChoice;
 }
 
-console.log(getComputerChoice());
-
 // Get player's choice
 // Prompt user to enter Rock, Paper, or Scissors, and return answer
 function getHumanChoice() {
@@ -29,12 +27,26 @@ function getHumanChoice() {
     return humanChoice;
 }
 
-console.log(getHumanChoice());
-
 // Declare the players score variables
 let computerScore = 0;
 let humanScore = 0;
 
 // Write logic to play single round
+function playRound(humanChoice, computerChoice) {
+    // Correct humanChoice so first letter is capitalized and remainder is lowercase
+    humanChoice = humanChoice.slice(0,1).toUpperCase() + humanChoice.slice(1).toLowerCase();
+    
+    if (humanChoice == "Rock" && computerChoice == "Scissors") {
+        console.log("Congrats, Rock beats Scissors");
+    } else if (humanChoice == "Paper" && computerChoice == "Rock") {
+        console.log("You win! Paper beats Rock.");
+    } else if (humanChoice == "Scissors" && computerChoice == "Paper") {
+        console.log("You win! Scissors beats Paper!");
+    }
+
+}
+
+
+playRound(getHumanChoice(), getComputerChoice());
 
 // Write logic to play entire game

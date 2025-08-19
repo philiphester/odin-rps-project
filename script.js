@@ -27,60 +27,40 @@ function getHumanChoice() {
     return humanChoice;
 }
 
-// Declare the players score variables
-let computerScore = 0;
-let humanScore = 0;
+// Write logic to play entire game. A game is five rounds.
+function playGame() {
 
-// // Write logic to play single round
-// function playRound(humanChoice, computerChoice) {
-//     // Correct humanChoice so first letter is capitalized and remainder is lowercase
-//     humanChoice = humanChoice.slice(0,1).toUpperCase() + humanChoice.slice(1).toLowerCase();
+    // Declare the players score variables
+    let computerScore = 0;
+    let humanScore = 0;
     
-//     if (humanChoice == "Rock" && computerChoice == "Scissors") {
-//         humanScore += 1;
-//         console.log("You win! " + humanChoice + " beats " + computerChoice);
-//     } else if (humanChoice == "Paper" && computerChoice == "Rock") {
-//         humanScore += 1;
-//         console.log("You win! " + humanChoice + " beats " + computerChoice);
-//     } else if (humanChoice == "Scissors" && computerChoice == "Paper") {
-//         humanScore += 1;
-//         console.log("You win! " + humanChoice + " beats " + computerChoice);
-//     } else if (computerChoice == "Rock" && humanChoice == "Scissors") {
-//         computerScore += 1;
-//         console.log("You lose! " + computerChoice + " beats " + humanChoice );
-//     } else if (computerChoice == "Paper" && humanChoice == "Rock") {
-//         computerScore += 1;
-//         console.log("You lose! " + computerChoice + " beats " + humanChoice );
-//     } else if (computerChoice == "Scissors" && humanChoice == "Paper") {
-//         computerScore += 1;
-//         console.log("You lose! " + computerChoice + " beats " + humanChoice );
-//     } else {
-//         console.log("It's a tie! You both picked " + humanChoice + ".");
-//     }
-// }
+    // Write logic to play single round
+    function playRound(humanChoice, computerChoice) {
+        // Correct humanChoice so first letter is capitalized and remainder is lowercase
+        humanChoice = humanChoice.slice(0,1).toUpperCase() + humanChoice.slice(1).toLowerCase();
 
-function playRound(humanChoice, computerChoice) {
-    humanChoice = humanChoice.slice(0,1).toUpperCase() + humanChoice.slice(1).toLowerCase();
+        if ((humanChoice == "Rock" && computerChoice == "Scissors") ||
+            (humanChoice == "Paper" && computerChoice == "Rock") ||
+            (humanChoice == "Scissors" && computerChoice == "Paper")) {
+                humanScore += 1;
+                console.log("You win! " + humanChoice + " beats " + computerChoice + ".");
+            } else if ((computerChoice == "Rock" && humanChoice == "Scissors") ||
+            (computerChoice == "Paper" && humanChoice == "Rock") ||
+            (computerChoice == "Scissors" && humanChoice == "Paper")) {
+                computerScore += 1;
+                console.log("You lose! " + humanChoice + " beats " + computerChoice + ".");
+            } else {
+                console.log("It's a tie! You both picked " + humanChoice + ".");
+            }
+    }
 
-    if ((humanChoice == "Rock" && computerChoice == "Scissors") ||
-        (humanChoice == "Paper" && computerChoice == "Rock") ||
-        (humanChoice == "Scissors" && computerChoice == "Paper")) {
-            humanScore += 1;
-            console.log("You win! " + humanChoice + " beats " + computerChoice + ".");
-        }else if ((computerChoice == "Rock" && humanChoice == "Scissors") ||
-        (computerChoice == "Paper" && humanChoice == "Rock") ||
-        (computerChoice == "Scissors" && humanChoice == "Paper")) {
-            computerScore += 1;
-            console.log("You lose! " + humanChoice + " beats " + computerChoice + ".");
-        } else {
-            console.log("It's a tie! You both picked " + humanChoice + ".");
-        }
+    // Play full five round game
+    
+
 }
 
-playRound(getHumanChoice(), getComputerChoice());
 
-console.log("Human score: " + humanScore);
-console.log("Computer score: " + computerScore);
+// playRound(getHumanChoice(), getComputerChoice());
 
-
-// Write logic to play entire game
+// console.log("Human score: " + humanScore);
+// console.log("Computer score: " + computerScore);

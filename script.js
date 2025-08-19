@@ -54,33 +54,11 @@ function playGame() {
         }
     }
  
-        // Previous round logic
-        // if ((humanChoice == "Rock" && computerChoice == "Scissors") ||
-        //     (humanChoice == "Paper" && computerChoice == "Rock") ||
-        //     (humanChoice == "Scissors" && computerChoice == "Paper")) {
-        //         humanScore += 1;
-        //         console.log("You win! " + humanChoice + " beats " + computerChoice + ".");
-        //     } else if ((computerChoice == "Rock" && humanChoice == "Scissors") ||
-        //     (computerChoice == "Paper" && humanChoice == "Rock") ||
-        //     (computerChoice == "Scissors" && humanChoice == "Paper")) {
-        //         computerScore += 1;
-        //         console.log("You lose! " + humanChoice + " beats " + computerChoice + ".");
-        //     } else {
-        //         console.log("It's a tie! You both picked " + humanChoice + ".");
-        //     }
-
     // Play full five round game
     for (round = 1; round <= 5; round++) {
         console.log(`Round ${round}: Rock, paper, scissors, shoot...`);
         playRound(getHumanChoice(), getComputerChoice());
     }
-
-    // Previous game logic
-    // playRound(getHumanChoice(), getComputerChoice());
-    // playRound(getHumanChoice(), getComputerChoice());
-    // playRound(getHumanChoice(), getComputerChoice());
-    // playRound(getHumanChoice(), getComputerChoice());
-    // playRound(getHumanChoice(), getComputerChoice());
 
     // Anounce the winner
     if (humanScore > computerScore) {

@@ -31,8 +31,8 @@ function getHumanChoice() {
 function playGame() {
 
     // Declare the players score variables
-    let computerScore = 0;
     let humanScore = 0;
+    let computerScore = 0;
     
     // Write logic to play single round
     function playRound(humanChoice, computerChoice) {
@@ -55,12 +55,21 @@ function playGame() {
     }
 
     // Play full five round game
-    
+    playRound(getHumanChoice(), getComputerChoice());
+    playRound(getHumanChoice(), getComputerChoice());
+    playRound(getHumanChoice(), getComputerChoice());
+    playRound(getHumanChoice(), getComputerChoice());
+    playRound(getHumanChoice(), getComputerChoice());
 
+    // Anounce the winner
+    if (humanScore > computerScore) {
+        console.log("Congratulations! You won the game!");
+    } else if (humanScore < computerScore) {
+        console.log("You lost the game! Try again.");
+    } else {
+        console.log("It's a tie. Try again!");
+    }
+    console.log("You scored: " + humanScore + " wins. The computer scored " + computerScore + " wins.");
 }
 
-
-// playRound(getHumanChoice(), getComputerChoice());
-
-// console.log("Human score: " + humanScore);
-// console.log("Computer score: " + computerScore);
+playGame();

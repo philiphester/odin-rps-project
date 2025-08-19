@@ -1,7 +1,7 @@
 // Odin Foundtations JavaScript Project: Rock, Paper, Scissors
 
 // Get computer's choice
-// Randomly return Rock, Paper, or Scissors and return answer
+// Randomly pick Rock, Paper, or Scissors and return answer
 function getComputerChoice() {
     let computerChoice;
     // Get random number between 0 and 2
